@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Interactive Airport Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Airport Map</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a gate or terminal..." />
+                <button id="searchButton">Search</button>
+            </div>
+        </header>
+
+        <div class="map-container">
+            <svg viewBox="0 0 600 400">
+                <!-- Terminal 1 -->
+                <rect class="terminal" x="50" y="50" width="200" height="300" data-name="Terminal 1" />
+                <text x="90" y="40" font-size="20" fill="black">Terminal 1</text>
+
+                <!-- Terminal 2 -->
+                <rect class="terminal" x="350" y="50" width="200" height="300" data-name="Terminal 2" />
+                <text x="390" y="40" font-size="20" fill="black">Terminal 2</text>
+
+                <!-- Gates for Terminal 1 -->
+                <rect class="gate" x="75" y="75" width="50" height="25" data-name="Gate A1" />
+                <text x="80" y="90" class="gate-text">Gate A1</text>
+
+                <rect class="gate" x="75" y="115" width="50" height="25" data-name="Gate A2" />
+                <text x="80" y="130" class="gate-text">Gate A2</text>
+
+                <rect class="gate" x="75" y="155" width="50" height="25" data-name="Gate A3" />
+                <text x="80" y="170" class="gate-text">Gate A3</text>
+
+                <!-- Gates for Terminal 2 -->
+                <rect class="gate" x="375" y="75" width="50" height="25" data-name="Gate B1" />
+                <text x="380" y="90" class="gate-text">Gate B1</text>
+
+                <rect class="gate" x="375" y="115" width="50" height="25" data-name="Gate B2" />
+                <text x="380" y="130" class="gate-text">Gate B2</text>
+
+                <rect class="gate" x="375" y="155" width="50" height="25" data-name="Gate B3" />
+                <text x="380" y="170" class="gate-text">Gate B3</text>
+            </svg>
+        </div>
+
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip"></div>
+
+        <!-- Modal -->
+        <div class="modal" id="infoModal">
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Gate Image" />
+            <p id="modalDescription"></p>
+            <button class="close" onclick="closeModal()">Close</button>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay" onclick="closeModal()"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+      <header>
+    <h1>Interactive Airport Map</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a gate or terminal..." />
+        <button id="searchButton">Search</button>
+    </div>
+    <p id="searchResult" class="search-result"></p> <!-- New result message div -->
+</header>
+
